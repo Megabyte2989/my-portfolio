@@ -38,21 +38,24 @@ export default function Hero({ currentColor }: HeroProps) {
 
       <div className="container flex relative z-10 mx-auto flex-col items-center justify-between px-4 py-16 md:flex-row">
         {/* Text content */}
-<div className="ml-12 pb-11 pt-0 md:mb-0 md:w-1/2">
+        <div className="ml-0 md:ml-12 pb-11 pt-0 md:mb-0 md:w-1/2">
           <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-className="z-50 mb-16 text-4xl font-bold md:text-6xl "
+            className="z-50 mb-6 text-3xl font-berkshire md:text-5xl lg:text-6xl"
           >
-            Hi, I'm{' '} <br/>
+            Hi, I'm{' '}
             <span
-              className={`bg-gradient-to-r  ${colorVariants[currentColor]} animate-pulse bg-clip-text font-chocolate text-transparent `}
+              className={`bg-gradient-to-r ${colorVariants[currentColor]} animate-pulse bg-clip-text font-chocolate text-transparent`}
             >
               Mayar youness
             </span>
           </m.h1>
 
-          
+          <m.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="z-50 mb-6 font-berkshire text-mdmd:text-xl">
+             our Vision, My Code – Let’s Build Something Extraordinary Together.
+          </m.p>
+
           {/* CTA buttons */}
         </div>
 
@@ -62,15 +65,15 @@ className="z-50 mb-16 text-4xl font-bold md:text-6xl "
           className="flex relative justify-center md:w-1/2"
         >
           <div
-className={`bg- relative size-80 overflow-hidden md:size-[30rem]${currentColor}-100 group`}
+            className={`relative size-280 overflow-hidden md:size-[30rem] ${currentColor}-100 group`}
           >
             <img
               src={imageMapping[currentColor]}
-              alt="Profile"
+              alt="Profile of Mayar Youness"
               className="z-50 size-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div
-className={`bg- absolute inset-0${currentColor}-500 opacity-0 transition-opacity duration-300 group-hover:opacity-20`}
+              className={`bg- absolute inset-0 ${currentColor}-500 opacity-0 transition-opacity duration-300 group-hover:opacity-20`}
             />
           </div>
 
