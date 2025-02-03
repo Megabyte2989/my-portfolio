@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script>
+    function setTheme() {
+      let e = 'color-mode',
+        t = document.documentElement,
+        a = localStorage.getItem(e)
+      function h() {
+        return window.matchMedia
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : void 0
+          : void 0
+      }
+      if (!a) {
+        t.dataset.theme = h() || 'light'
+        return
+      }
+      switch ((a = JSON.parse(a))) {
+        case 'dark':
+          t.dataset.theme = 'dark'
+          break
+        case 'light':
+          t.dataset.theme = 'light'
+          break
+        case 'system':
+          t.dataset.theme = h() || 'light'
+      }
+    }
+    setTheme()
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    window.onload = function () {
+      particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+        console.log('callback - particles.js config loaded');
+      });
+    };
+  </script>
+</head>
+
+<body>
+  <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

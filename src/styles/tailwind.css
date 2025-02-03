@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply font-sans;
+}
+
+html body {
+  @apply max-w-screen overflow-x-hidden;
+}
+
+/* @media (min-width: 2160px) {
+  html {
+    font-size: 15px;
+  }
+} */
+
+*:focus {
+  outline: none;
+}
+
+*:not(input):not(textarea):not([contenteditable='true']):focus-visible {
+  outline: 0 !important;
+  box-shadow: theme(colors.accent) 0px 0px 0px 1px;
+}
+* {
+  tab-size: 2;
+
+  &:hover {
+    scrollbar-color: auto;
+  }
+}
+
+/* input,
+textarea {
+  font-size: max(16px, 1rem);
+} */
+
+a {
+  @apply break-all;
+}
+
+@screen lg {
+  input,
+  textarea {
+    font-size: 1rem;
+  }
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose
+  :where(blockquote):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  @apply relative border-0;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 1em;
+    background-color: theme(colors.accent);
+  }
+}
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('../assets/fonts/GeistVF.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 100 900;
+
+}
+
+@font-face {
+  font-family: 'Painting with Chocolate';
+  src: url('../assets/fonts/Painting_With_Chocolate.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'berkshire-swash';
+  src: url('../assets/fonts/BerkshireSwash-Regular.ttf') format('truetype');
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+}
