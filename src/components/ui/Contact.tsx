@@ -1,51 +1,53 @@
-import { m} from "framer-motion";
+import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { m } from "framer-motion";
 
-const Contact = () => {
+const contacts = [
+  {
+    name: "LinkedIn",
+    icon: <FaLinkedin className="text-blue-600" />,
+    link: "https://linkedin.com/in/mayaryouness",
+  },
+  {
+    name: "GitHub",
+    icon: <FaGithub className="text-gray-800" />,
+    link: "https://github.com/Megabyte2989",
+  },
+  {
+    name: "Email",
+    icon: <FaEnvelope className="text-red-500" />,
+    link: "mailto:mayar.youness28@gmail.com",
+  },
+  {
+    name: "WhatsApp",
+    icon: <FaWhatsapp className="text-green-500" />,
+    link: "https://wa.me/201019741633",
+  },
+];
+
+export default function Contact() {
   return (
-    <section id="contact" className="bg-black py-20 text-white">
-      <div className="container mx-auto px-6">
-        <h2 className="mb-12 text-4xl font-bold text-maroon-red">Let's Connect</h2>
-        
-        <m.form
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mx-auto max-w-2xl space-y-6"
-        >
-          <div>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full rounded-lg bg-gray-900 p-4 focus:outline-none focus:ring-2 focus:ring-maroon-red"
-            />
-          </div>
-          
-          <div>
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full rounded-lg bg-gray-900 p-4 focus:outline-none focus:ring-2 focus:ring-maroon-red"
-            />
-          </div>
-          
-          <div>
-            <textarea
-              placeholder="Message"
-              rows={5}
-              className="w-full rounded-lg bg-gray-900 p-4 focus:outline-none focus:ring-2 focus:ring-maroon-red"
-             />
-          </div>
-
-          <m.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full rounded-lg bg-maroon-red py-3 text-white transition-all hover:bg-[#A52A2A]"
-          >
-            Send Message
-          </m.button>
-        </m.form>
+    <section className="py-16">
+      <div className="container mx-auto px-6 lg:px-12 text-center">
+        <h2 className="text-3xl font-bold mb-12">Contact Me</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {contacts.map((contact) => (
+            <m.a
+              key={contact.name}
+              href={contact.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 p-4 rounded-lg shadow-lg hover:shadow-xl transition-all text-lg font-medium"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              {contact.icon}
+              <span>{contact.name}</span>
+            </m.a>
+          ))}
+        </div>
       </div>
     </section>
   );
-};
-
-export default Contact;
+}

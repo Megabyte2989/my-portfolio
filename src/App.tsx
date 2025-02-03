@@ -7,6 +7,7 @@ import Contact from './components/ui/Contact';
 import Hero from './components/ui/Hero';
 import Projects from './components/ui/Projects';
 import Skills from './components/ui/Skills';
+import Footer from './components/ui/footer';
 import { RootProviders } from './providers/root-providers';
 
 const colors = ['indigo', 'pink', 'teal', 'amber', 'purple'] as const;
@@ -37,9 +38,10 @@ const AppLayer = () => {
     <>
       <Navbar currentColor={currentColor} onColorChange={handleColorChange} />
       <Hero currentColor={currentColor} />
-      <Projects />
       <Skills />
+      <Projects />
       <Contact />
+      <Footer/>
     </>
   ) : (
     <div>Loading...</div>
