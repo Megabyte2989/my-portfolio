@@ -1,5 +1,4 @@
 import { m } from 'framer-motion'
-
 interface HeroProps {
   currentColor: 'amber' | 'indigo' | 'pink' | 'teal' | 'purple'
 }
