@@ -26,7 +26,7 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section className="py-16">
+    <section id="contact" className="py-16">
       <div className="container mx-auto px-6 lg:px-12 text-center">
         <h2 className="text-3xl font-bold mb-12">Contact Me</h2>
         <div className="flex flex-wrap justify-center gap-6">

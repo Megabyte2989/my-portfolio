@@ -26,7 +26,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="py-16 ">
+    <section id="projects" className="py-16 ">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-3xl font-bold text-center font-chocolate mb-12">My Work</h2>
         <div className="space-y-16">

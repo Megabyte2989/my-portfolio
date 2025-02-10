@@ -29,7 +29,7 @@ const skills = {
 
 export default function Skills() {
   return (
-    <section className="py-16 ">
+    <section id="skills" className="py-16 ">
       <div className="container mx-auto px-6 lg:px-12">
         <h2 className="text-3xl font-bold  text-center font-berkshire mb-12">Skills</h2>
         
