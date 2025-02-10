@@ -44,7 +44,7 @@ const AppLayer = () => {
       <Footer/>
     </>
   ) : (
-    <div>Loading...</div>
+    <div>hi there.. <br /> welcome to my portfolio</div>
   );
 };
 
