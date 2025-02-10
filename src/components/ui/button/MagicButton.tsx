@@ -47,7 +47,9 @@ export const MagicButton: FC<MagicButtonProps> = ({
     <m.button
       whileHover={whileHover}
       whileTap={{ scale: 0.95 }}
-      className={`bg-gradient-to-r ${colorVariants[color]} rounded-lg px-4 py-2 text-white shadow-lg ${className}`}
+      className={`bg-gradient-to-r ${colorVariants[color]} rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base text-white shadow-lg ${className}`}
+
+
       onClick={handleClick}
       {...props}
     >
