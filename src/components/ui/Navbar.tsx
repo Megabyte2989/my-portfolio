@@ -7,7 +7,8 @@ interface NavbarProps {
 }
 
 const Navbar = ({ currentColor, onColorChange }: NavbarProps) => {
-  const links = ['Projects', 'Skills', 'Contact'];
+  const links = ['Projects', 'Skills', 'Contact', 'FAQ'];
+
 
   return (
     <m.nav initial={{ y: -100 }} animate={{ y: 0 }} className={`top-0 z-50 w-full`}>

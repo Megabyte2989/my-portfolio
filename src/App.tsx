@@ -1,13 +1,14 @@
 import type { FC } from 'react';
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Navbar from '~/components/ui/Navbar';
-
+import faqData from '~/components/ui/faqData'; // Corrected import path
+import FaqSection from './components/ui/FAQ';
 import Contact from './components/ui/Contact';
 import Hero from './components/ui/Hero';
 import Projects from './components/ui/Projects';
 import Skills from './components/ui/Skills';
-import Footer from './components/ui/footer';
+import Footer from './components/ui/footer'; // Corrected import path
 import { RootProviders } from './providers/root-providers';
 
 const colors = ['indigo', 'pink', 'teal', 'amber', 'purple'] as const;
@@ -40,8 +41,9 @@ const AppLayer = () => {
       <Hero currentColor={currentColor} />
       <Skills />
       <Projects />
+      <FaqSection data={faqData} />
       <Contact />
-      <Footer/>
+      <Footer />
     </>
   ) : (
     <div>hi there.. <br /> welcome to my portfolio</div>
