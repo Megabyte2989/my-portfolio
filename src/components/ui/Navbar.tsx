@@ -7,7 +7,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({ currentColor, onColorChange }: NavbarProps) => {
-  const links = ['Projects', 'Skills', 'Contact', 'FAQ'];
+  const links = ['Projects', 'Skills', 'Contact'];
 
 
   return (
