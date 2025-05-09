@@ -3,19 +3,27 @@ import { useState } from "react"; // Import useState
 
 const projects = [
   {
-    title: "New Horizons Cairo",
-    tech: ["React", "Node.js", "SQL"],
-    description: "Website redesign improving accessibility by 40%",
-    image: "./blue.jpeg",
-    link: "https://newhorizonscairo.com",
+    title: "🎯 Merak – Training Company Platform",
+    tech: ["React", "Node.js", "SQL", "framer-motion", "Tailwind"],
+    description: "A modern, interactive website for a training company, designed to showcase courses, improve user engagement, and provide a seamless browsing experience with dynamic UI elements.",
+    image: "https://i.ibb.co/mCKGWySJ/Screenshot-517.png", 
+    link: "https://merak.mayaryouness.tech",
   },
   {
-    title: "Ramy-Rent",
-    tech: ["React", "Tailwind", "MongoDB"],
-    description: "Car rental platform with 35% efficiency boost",
-    image: "./orange.webp",
-    link: "https://ramy-rent.com",
+    title: "'Drifter V1' – A Smart Car Rental System!",
+    tech: ["React", "Tailwind", "MongoDB" , "Node.js", "Express"],
+    description: " a comprehensive Car Rental System designed to streamline operations for administrators and deliver a seamless, user-friendly experience for clients ,The system features a robust admin dashboard for managing car rentals, user accounts, and bookings, while the client interface offers an intuitive platform for browsing available cars, making reservations, and managing bookings.",
+    image: "https://i.ibb.co/fYDBfDJD/Screenshot-518.png",
+    link: "https://depi-react-final-83rt.vercel.app",
   },
+  {
+    title: "🛒'HAYAT' - E-commerce Website",
+    tech: ["React", "Vite", "Tailwind" , "firebase"],
+    description: "Hayat is a modern, responsive e-commerce fashion website designed to provide a seamless online shopping experience. It showcases a curated collection of clothing and accessories, emphasizing both aesthetics and usability. The project demonstrates strong front-end skills with a clean UI, reusable components, and fast performance enabled by Vite and React.",
+    image: "https://i.ibb.co/twjXrMqk/Screenshot-519.png",
+    link: "https://hayat.mayaryouness.tech/",
+  },
+   
 ];
 
 export default function Projects() {
